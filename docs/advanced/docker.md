@@ -35,12 +35,12 @@ And that's all! Read below to learn more about this image.
 
 ### Get the image
 
-    docker pull consensysllc/truffle
+    docker pull combient/truffle
 
 Will get you the latest one. Now, for a specific version of truffle,
 if available in docker hub, say `1.0.2`, do
 
-    docker pull consensysllc/truffle:1.0.2
+    docker pull combient/truffle:1.0.2
 
 ### Setting an alias
 
@@ -56,7 +56,7 @@ alias truffle="docker run \
 -e GROUP_ID=`id -g` \
 -p 8080:8080 \
 -v $(pwd):/workspace \
-consensysllc/truffle \
+combient/truffle \
 truffle"
 ```
 
