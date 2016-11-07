@@ -1,6 +1,7 @@
-FROM node:5.10.1-slim
+FROM node:7.0.0
 
 MAINTAINER Herman Junge "herman.junge@consensys.net"
+MAINTAINER Orjan Lundberg "orjan.lundberg@combient.com" 
 
 ################################################################################
 #
@@ -19,6 +20,7 @@ MAINTAINER Herman Junge "herman.junge@consensys.net"
 ################################################################################
 
 RUN apt-get update -y && apt-get install -y git \
+    && npm config set python python2.7 \
     && npm install -g truffle \
     && rm -rf /tmp/* /root/.npm/* /var/lib/apt/lists/* \
     && apt-get purge -y --auto-remove git
